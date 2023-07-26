@@ -1,0 +1,74 @@
+Documents 
+   Collections
+
+c:\>md mymongodata
+c:\>cd mymongodata
+
+C:\mymongodata>mongo
+            // showing list dbs
+> show dbs
+EmpDB     0.000GB
+admin     0.000GB
+config    0.000GB
+#DB creation
+> use zenuredb
+switched to db zenuredb
+
+
+>db.employee.insert({"ename" :"Ramesh","sal" :50000} )
+
+ ename=Ramesh
+ sal=50000
+
+
+>db.employee.insert({"ename" :"Krishna","sal" :60000})
+
+> show collections
+employee
+
+> db.employee.find({})
+{ "_id" : ObjectId("64b627865f730b91b11f2ccc"), "ename" : "Ramesh", "sal" : 50000 }
+{ "_id" : ObjectId("64b627d15f730b91b11f2ccd"), "ename" : "Krishna", "sal" : 60000 }
+
+>db.employee.insert({"ename":"Raju", "sal":75000})
+
+ db.employee.find({},{"ename":1})
+{ "_id" : ObjectId("64b627865f730b91b11f2ccc"), "ename" : "Ramesh" }
+{ "_id" : ObjectId("64b627d15f730b91b11f2ccd"), "ename" : "Krishna" }
+{ "_id" : ObjectId("64b628b25f730b91b11f2cce"), "ename" : "Raju" }
+> db.employee.find({},{"sal":1})
+{ "_id" : ObjectId("64b627865f730b91b11f2ccc"), "sal" : 50000 }
+{ "_id" : ObjectId("64b627d15f730b91b11f2ccd"), "sal" : 60000 }
+{ "_id" : ObjectId("64b628b25f730b91b11f2cce"), "sal" : 75000 }
+
+>db.students.insert({"sno":10,"sname":"Bhanu" })
+ 
+WriteResult({ "nInserted" : 1 })
+> show collections
+employee
+students
+> db.students.insert({"sno":100,"sname":"Kiran" })
+WriteResult({ "nInserted" : 1 })
+> db.students.find({})
+{ "_id" : ObjectId("64b62b7c5f730b91b11f2ccf"), "sno" : 10, "sname" : "Bhanu" }
+{ "_id" : ObjectId("64b62bba5f730b91b11f2cd0"), "sno" : 100, "sname" : "Kiran" }
+> db.students.insertMany([{"sno":200,"sname":"Chandu"},{"sno":300,"sname":"ramu"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64b62c605f730b91b11f2cd1"),
+                ObjectId("64b62c605f730b91b11f2cd2")
+        ]
+}
+> db.students.find({})
+{ "_id" : ObjectId("64b62b7c5f730b91b11f2ccf"), "sno" : 10, "sname" : "Bhanu" }
+{ "_id" : ObjectId("64b62bba5f730b91b11f2cd0"), "sno" : 100, "sname" : "Kiran" }
+{ "_id" : ObjectId("64b62c605f730b91b11f2cd1"), "sno" : 200, "sname" : "Chandu" }
+{ "_id" : ObjectId("64b62c605f730b91b11f2cd2"), "sno" : 300, "sname" : "ramu" }
+
+
+> db.students.deleteMany({})
+{ "acknowledged" : true, "deletedCount" : 4 }
+> db.students.find({})
+>
+

@@ -1,0 +1,62 @@
+
+Bug Title: Incorrect Subtotal Calculation in Shopping Cart
+
+Bug Description:
+When adding multiple items to the shopping cart in the Excel shopping app, the subtotal calculation is incorrect. The total displayed in the shopping cart does not accurately reflect the sum of the individual item prices.
+
+Steps to Reproduce:
+
+Open the Excel shopping app.
+Navigate to the "Product Catalog" sheet.
+Select an item and click on the "Add to Cart" button.
+Repeat step 3 for at least two different items.
+View the shopping cart and observe the displayed subtotal.
+Expected Result:
+The subtotal in the shopping cart should be the sum of the individual item prices, accurately reflecting the total cost of the selected items.
+
+Actual Result:
+The displayed subtotal in the shopping cart does not accurately calculate the sum of the individual item prices. It shows an incorrect total that is either higher or lower than the expected value.
+
+Additional Information:
+
+The bug is consistent across different products and quantities added to the shopping cart.
+The issue occurs both when adding items directly from the "Product Catalog" sheet and when using the "Quick Add" feature.
+The bug affects all users of the Excel shopping app and is not limited to a specific device or operating system.
+Attachments:
+
+Screenshots or video recordings demonstrating the incorrect subtotal calculation in the shopping cart.
+Severity: Medium
+Priority: High
+
+
+
+
+
+
+
+
+
+When attempting to add an item to the shopping cart in the shopping app, the "Add to Cart" button does not function correctly, preventing users from successfully adding items to their cart.
+
+Steps to Reproduce:
+
+Launch the shopping app.
+Browse through the product catalog and select an item.
+Click on the "Add to Cart" button.
+Observe the app's response.
+Expected Result:
+After clicking on the "Add to Cart" button, the selected item should be successfully added to the shopping cart, and the user should receive a confirmation message or feedback indicating that the action was successful.
+
+Actual Result:
+When clicking on the "Add to Cart" button, nothing happens. The item is not added to the cart, and no feedback or confirmation message is displayed to the user.
+
+Additional Information:
+
+The issue occurs with all items in the product catalog.
+The bug affects all users of the shopping app and is not limited to a specific device or operating system.
+Other features of the shopping app, such as browsing and searching for products, are functioning correctly.
+Attachments:
+
+Screenshots or video recordings demonstrating the "Add to Cart" button not functioning.
+Severity: High
+Priority: High
